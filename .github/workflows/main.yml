@@ -21,7 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create a release
-        id: create_release
-      - run: echo "Action on merging from develop to mater branch"
+        run: echo "Action on merging from develop to mater branch"
 #        uses: actions/checkout@v3
 #        with: ${{ secrets.GITHUB_TOKEN }}
