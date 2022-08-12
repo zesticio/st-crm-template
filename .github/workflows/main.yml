@@ -20,6 +20,16 @@ jobs:
     if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+        # Its a combination of various linters, written in bash, to help validate your source code
+      - name: Checkout code
+        uses: actions/checkout@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB TOKEN: ${{ secrets:GITHUB_TOKEN }}
+
       - name: Create a release
         run: echo "Action on merging from develop to mater branch"
 #        uses: actions/checkout@v3

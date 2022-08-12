@@ -1,0 +1,24 @@
+name: Deploy to release branch
+
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+
+on:
+  # Triggers the workflow on push or pull request events but only for dev branch
+  push:
+    branches:
+      - develop
+
+jobs:
+  super-lint:
+    runs-on: ubuntu-latest
+    steps:
+        # Its a combination of various linters, written in bash, to help validate your source code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run super linter
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB TOKEN: ${{ secrets:GITHUB_TOKEN }}
