@@ -18,9 +18,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create a release
-        uses: zesticio/release_to_branch
+        uses: zesticio/release_to_branch@main
         env:
-          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           email: 'deebendu.kumar@zestic.in'
@@ -30,7 +29,7 @@ jobs:
           destination_branch: 'release'
           commit_message: ${{ github.ref }}
 
-          
+
 #      - name: Run super linter
 #        uses: github/super-linter@v4
 #        env:

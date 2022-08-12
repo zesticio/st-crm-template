@@ -23,10 +23,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Create a release
-        uses: zesticio/release_to_branch
+      - name: Update your release branch
+        uses: zesticio/update-release-branch@v1.0.0
         env:
-          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           email: 'deebendu.kumar@zestic.in'
