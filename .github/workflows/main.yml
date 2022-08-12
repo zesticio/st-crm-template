@@ -11,9 +11,9 @@ on:
     types:
       - closed
 
-permissions:
-  contents: read
-  pull-requests: read
+#permissions:
+#  contents: read
+#  pull-requests: read
 
 jobs:
   deploy:
@@ -23,14 +23,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-        # Its a combination of various linters, written in bash, to help validate your source code
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Create a release
+        uses: zesticio/release_to_branch
         env:
           DEFAULT_BRANCH: main
-          GITHUB TOKEN: ${{ secrets:GITHUB_TOKEN }}
-
-      - name: Create a release
-        run: echo "Action on merging from develop to mater branch"
-#        uses: actions/checkout@v3
-#        with: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          email: 'deebendu.kumar@zestic.in'
+          source_file: "."
+          username: ${{ github.actor }}
+          destination_repo: 'zesticio/st-crm-template'
+          destination_branch: 'release'
+          commit_message: ${{ github.ref }}

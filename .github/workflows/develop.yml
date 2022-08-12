@@ -17,8 +17,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run super linter
-        uses: github/super-linter@v4
+      - name: Create a release
+        uses: zesticio/release_to_branch
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          email: 'deebendu.kumar@zestic.in'
+          source_file: "."
+          username: ${{ github.actor }}
+          destination_repo: 'zesticio/st-crm-template'
+          destination_branch: 'release'
+          commit_message: ${{ github.ref }}
+
+          
+#      - name: Run super linter
+#        uses: github/super-linter@v4
+#        env:
+#          DEFAULT_BRANCH: main
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
