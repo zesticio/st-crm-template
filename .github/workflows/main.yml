@@ -1,39 +1,27 @@
 name: Deploy to release branch
 
 env:
-  master: master
-  develop: develop
-  release: release
+  GITHUB_TOKEN: ${{ github.token }}
 
 on:
   # Triggers the workflow on push or pull request events but only for dev branch
-  push:
-    branches:
-      - master
   pull_request:
     branches:
-      - master
+      - main
+    types:
+      - closed
 
-  # Allows you to run this workflow manually from the action tab
-  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
 
 jobs:
-
-
-  build:
+  deploy:
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
-
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - name: move to release branch
-        env:
-          platform: "Github"
-          var: "develop"
-        run: |
-          echo ${{ env.var }}
-      - name: prod step
-        env:
-          var: "production"
-        run: |
-          echo ${{ env.var }}
+      - name: Create a release
+        id: create_release
+      - run: echo "Action on merging from develop to mater branch"
+#        uses: actions/checkout@v3
+#        with: ${{ secrets.GITHUB_TOKEN }}
