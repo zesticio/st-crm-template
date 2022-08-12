@@ -5,26 +5,20 @@ env:
 
 on:
   # Triggers the workflow on push or pull request events but only for dev branch
-  pull_request:
+  push:
     branches:
-      - main
-    types:
-      - closed
-
-#permissions:
-#  contents: read
-#  pull-requests: read
+      - develop
 
 jobs:
-  deploy:
-    if: ${{ github.event.pull_request.merged }}
+  super-lint:
     runs-on: ubuntu-latest
     steps:
+        # Its a combination of various linters, written in bash, to help validate your source code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Update your release branch
-        uses: zesticio/update-release-branch@v1.0.0
+      - name: Create a release
+        uses: zesticio/release_to_branch@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -34,3 +28,10 @@ jobs:
           destination_repo: 'zesticio/st-crm-template'
           destination_branch: 'release'
           commit_message: ${{ github.ref }}
+
+
+#      - name: Run super linter
+#        uses: github/super-linter@v4
+#        env:
+#          DEFAULT_BRANCH: main
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
