@@ -21,16 +21,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Update your release branch
-        uses: zesticio/update-release-branch@v1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          email: 'deebendu.kumar@zestic.in'
-          source_file: "."
-          username: ${{ github.actor }}
-          destination_repo: 'zesticio/st-crm-template'
-          destination_branch: 'release'
-          commit_message: ${{ github.ref }}
+        run: echo 'Deploying to github pages'
+#        uses: actions/checkout@v3
