@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
 </head>
 
-<body class="sidebar-icon-only">
+<body class="sidebar-icon-only sidebar-dark">
   <div class="container-scroller">
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -101,7 +101,7 @@
                 <span>Zestic IT Solutions Private Limited</span>
               </div>
 
-              <a class="dropdown-item">
+              <a href="profile.html" class="dropdown-item">
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
@@ -120,20 +120,6 @@
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_settings-panel.html -->
-      <div class="theme-setting-wrapper">
-        <div id="settings-trigger"><i class="ti-settings"></i></div>
-        <div id="theme-settings" class="settings-panel">
-          <i class="settings-close ti-close"></i>
-          <p class="settings-heading">SIDEBAR SKINS</p>
-          <div class="sidebar-bg-options selected" id="sidebar-light-theme">
-            <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
-          </div>
-          <div class="sidebar-bg-options" id="sidebar-dark-theme">
-            <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
-          </div>
-        </div>
-      </div>
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -152,7 +138,7 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="#">Contacts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="contacts.html">Contacts</a></li>
                 <li class="nav-item"> <a class="nav-link" href="#">Organization</a></li>
                 <li class="nav-item"> <a class="nav-link" href="#">Customers</a></li>
                 <li class="nav-item"> <a class="nav-link" href="#">Vendor</a></li>
@@ -311,6 +297,28 @@
                       </tbody>
                     </table>
                   </div>
+                </div>
+              </div>
+              <div class="row mt-5 text-right">
+                <div class="col">
+                  <nav aria-label="...">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <span class="page-link">Previous</span>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active">
+                        <span class="page-link">
+                          2
+                          <span class="sr-only">(current)</span>
+                        </span>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
             </div>

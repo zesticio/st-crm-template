@@ -11160,6 +11160,7 @@ fieldset:disabled .wizard > .actions a,
   padding: 11px 15px;
   text-decoration: none;
   border: none;
+  font-size:15px;
 }
 .add-btn{
   color: #fff;
@@ -11170,6 +11171,24 @@ fieldset:disabled .wizard > .actions a,
   font-size: 25px;
   border: none;
   margin-left: 10px;
+}
+.sidebar-dark .sidebar{
+background:#595F69 !important;
+}
+.sidebar-dark.sidebar-icon-only .sidebar .nav.sub-menu{
+background:#595F69 !important;
+}
+.sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse, .sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing{
+background:#595F69 !important;
+}
+.sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link:hover .menu-title{
+background:#595F69 !important;
+}
+.sidebar-dark.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title{
+background:#595F69 !important;
+}
+.sidebar-dark .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link{
+background:#595F69 !important;
 }
 .btn-primary:hover, .wizard > .actions a:hover {
   color: #fff;
@@ -28804,20 +28823,52 @@ div.tagsinput span.tag a {
 
 .sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"] {
   border-radius: 8px 8px 0 0;
-  background: #3A86FF;
+  background: #595F69;
   color: #fff;
 }
 
 .sidebar .nav:not(.sub-menu) > .nav-item.active {
-  background: #3A86FF;
+  background: #4B5057;
 }
-
+.sidebar-dark .sidebar .nav .nav-item.active > .nav-link{
+  background: #4B5057 !important;
+}
+.sidebar .nav .nav-item.active > .nav-link{
+  background: #4B5057 !important;
+}
+.content-wrapper {
+  background: #f1f1f1 !important;
+}
+.dropdown .dropdown-toggle:after{
+  font-size: .675rem;
+}
+.pagination .page-item.active .page-link{
+  background: #3A86FF !important;
+}
+.sidebar-dark .navbar .navbar-brand-wrapper {
+  background: #ffffff !important;
+}
+.table td, .jsgrid .jsgrid-table td{
+  font-size: 15px;
+}
+h4, .h4{
+  font-size: 22px;
+}
+.table thead th, .jsgrid .jsgrid-table thead th{
+  font-size: 14px;
+}
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .input-group-text i.icon-search{
+  font-size: 1rem;
+  color: #6C7383;
+  margin-right: 6px;
+}
+ 
 .sidebar .nav.sub-menu {
   margin-bottom: 0;
   margin-top: 0;
   list-style: none;
   padding: 0.25rem 0 0 3.07rem;
-  background: #3A86FF;
+  background: #595F69;
   padding-bottom: 12px;
 }
 
@@ -28839,7 +28890,7 @@ div.tagsinput span.tag a {
   color: #fff;
   padding: 0.7rem 1rem;
   position: relative;
-  font-size: 0.875rem;
+  font-size: 15px;
   line-height: 1;
   height: auto;
   border-top: 0;
