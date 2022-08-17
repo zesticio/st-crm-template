@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- endinject -->
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
@@ -81,7 +82,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <div class="admin-name pb-0 p-3">
-                <h4>Deebendu</h4>
+                <h4>Deebendu Kumar</h4>
                 <span>Zestic IT Solutions Private Limited</span>
               </div>
 
@@ -177,7 +178,7 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="content-header mb-4 d-flex align-items-center justify-content-between">
-            <h4 class="card-title mb-0">Settings > States</h4>
+            <h4 class="card-title mb-0">Employee</h4>
 
           </div>
           <div class="card">
@@ -190,7 +191,7 @@
                         <i class="icon-search"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control" id="navbar-search-input" placeholder="Search country..." aria-label="search" aria-describedby="search">
+                    <input type="text" class="form-control" id="navbar-search-input" placeholder="Search employee..." aria-label="search" aria-describedby="search">
                     <span class="input-group-text" id="filter">
                       <img src="images/Filter.svg">
                     </span>
@@ -198,8 +199,8 @@
                 </div>
                 <div class="col-md-4 text-right">
                   <div class="buttons dropdown">
-                    <button  class="export-btn dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false"> <i class="ti-download btn-icon-prepend"></i> Import</button>
-                    <button class="add-btn" data-bs-toggle="modal" data-bs-target="#add-state">+</button>
+                    <button  class="export-btn dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">Actions</button>
+                    <button class="add-btn" data-bs-toggle="modal" data-bs-target="#add-city">+</button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -221,6 +222,7 @@
                               </label>
                             </div>
                           </th>
+                          <th>City</th>
                           <th>State</th>
                           <th>Country</th>
                           <th>Code</th>
@@ -237,6 +239,7 @@
                               </label>
                             </div>
                           </td>
+                          <td>Panchkula</td>
                           <td>Haryana</td>
                           <td>India</td>
                           <td>In</td>
@@ -256,6 +259,7 @@
                               </label>
                             </div>
                           </td>
+                          <td>Panchkula</td>
                           <td>Haryana</td>
                           <td>India</td>
                           <td>In</td>
@@ -275,6 +279,7 @@
                               </label>
                             </div>
                           </td>
+                          <td>Panchkula</td>
                           <td>Haryana</td>
                           <td>India</td>
                           <td>In</td>
@@ -321,52 +326,67 @@
       </div>
       <!-- page-body-wrapper ends -->
     </div>
-    <div class="modal fade modal-form" id="add-state" tabindex="-1" role="dialog" aria-labelledby="add-stateLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="add-stateLabel">Add State</h5>
-          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="column">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Code">
-            </div>
-            <div class="form-group">
-              <textarea type="text" class="form-control" placeholder="Description"></textarea>
-            </div>
-            <div class="form-group">
-              <div class="input-group search-bar">
-                <div class="input-group-prepend hover-cursor">
-                  <span class="input-group-text border-right text-black text-uppercase">
-                    In
-                  </span>
+    <div class="modal fade modal-form" id="add-city" tabindex="-1" role="dialog" aria-labelledby="add-cityLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="add-cityLabel">Add City</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="column">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="City">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Code">
+              </div>
+              <div class="form-group">
+                <textarea type="text" class="form-control" placeholder="Description"></textarea>
+              </div>
+              <div class="form-group">
+                <div class="input-group search-bar">
+                  <div class="input-group-prepend hover-cursor">
+                    <span class="input-group-text border-right text-black text-uppercase">
+                      In
+                    </span>
+                  </div>
+                  <button class="form-control text-left dropdown-toggle" id="country" data-toggle="dropdown" aria-expanded="false">India</button>
+                  <ul class="dropdown-menu" aria-labelledby="country">
+                    <li><a class="dropdown-item" href="#">India</a></li>
+                    <li><a class="dropdown-item" href="#">USA</a></li>
+                    <li><a class="dropdown-item" href="#">UK</a></li>
+                  </ul>
                 </div>
-                <button class="form-control text-left dropdown-toggle" id="state" data-toggle="dropdown" aria-expanded="false">India</button>
-                <ul class="dropdown-menu" aria-labelledby="state">
-                  <li><a class="dropdown-item" href="#">India</a></li>
-                  <li><a class="dropdown-item" href="#">USA</a></li>
-                  <li><a class="dropdown-item" href="#">UK</a></li>
-                </ul>
+              </div>
+              <div class="form-group">
+                <div class="input-group search-bar">
+                  <div class="input-group-prepend hover-cursor">
+                    <span class="input-group-text border-right text-black text-uppercase">
+                      In
+                    </span>
+                  </div>
+                  <button class="form-control text-left dropdown-toggle" id="country" data-toggle="dropdown" aria-expanded="false">State</button>
+                  <ul class="dropdown-menu" aria-labelledby="country">
+                    <li><a class="dropdown-item" href="#">India</a></li>
+                    <li><a class="dropdown-item" href="#">USA</a></li>
+                    <li><a class="dropdown-item" href="#">UK</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="submit-btn mt-3 d-flex align-items-center justify-content-end">
-            <button type="button" class="btn btn-primary w-100">Create</button>
+            <div class="submit-btn mt-3 d-flex align-items-center justify-content-end">
+              <button type="button" class="btn btn-primary w-100">Create</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- container-scroller -->
+  <!-- container-scroller -->
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>

@@ -10,12 +10,14 @@
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- endinject -->
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
 </head>
 
 <body class="sidebar-icon-only sidebar-dark">
+
   <div class="container-scroller">
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -104,6 +106,7 @@
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -177,7 +180,7 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="content-header mb-4 d-flex align-items-center justify-content-between">
-            <h4 class="card-title mb-0">Settings > States</h4>
+            <h4 class="card-title mb-0">Settings > Warehouses</h4>
 
           </div>
           <div class="card">
@@ -190,7 +193,8 @@
                         <i class="icon-search"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control" id="navbar-search-input" placeholder="Search country..." aria-label="search" aria-describedby="search">
+                    <input type="text" class="form-control" id="navbar-search-input" placeholder="Search warehouse..."
+                      aria-label="search" aria-describedby="search">
                     <span class="input-group-text" id="filter">
                       <img src="images/Filter.svg">
                     </span>
@@ -198,13 +202,7 @@
                 </div>
                 <div class="col-md-4 text-right">
                   <div class="buttons dropdown">
-                    <button  class="export-btn dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false"> <i class="ti-download btn-icon-prepend"></i> Import</button>
-                    <button class="add-btn" data-bs-toggle="modal" data-bs-target="#add-state">+</button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
+                    <button class="add-btn" data-bs-toggle="modal" data-bs-target="#add-warehouse">+</button>
                   </div>
                 </div>
               </div>
@@ -221,9 +219,8 @@
                               </label>
                             </div>
                           </th>
-                          <th>State</th>
-                          <th>Country</th>
-                          <th>Code</th>
+                          <th>name</th>
+                          <th>code</th>
                           <th>Id</th>
                           <th>Status</th>
                         </tr>
@@ -237,9 +234,8 @@
                               </label>
                             </div>
                           </td>
-                          <td>Haryana</td>
                           <td>India</td>
-                          <td>In</td>
+                          <td>IN</td>
                           <td>100000</td>
                           <td>
                             <label class="badge badge-info">Available</label>
@@ -256,9 +252,8 @@
                               </label>
                             </div>
                           </td>
-                          <td>Haryana</td>
                           <td>India</td>
-                          <td>In</td>
+                          <td>IN</td>
                           <td>100000</td>
                           <td>
                             <label class="badge badge-info">Available</label>
@@ -275,9 +270,8 @@
                               </label>
                             </div>
                           </td>
-                          <td>Haryana</td>
                           <td>India</td>
-                          <td>In</td>
+                          <td>IN</td>
                           <td>100000</td>
                           <td>
                             <label class="badge badge-info">Available</label>
@@ -286,7 +280,7 @@
                             <img src="images/More.svg" alt="image">
                           </td>
                         </tr>
-                       
+
                       </tbody>
                     </table>
                   </div>
@@ -321,52 +315,37 @@
       </div>
       <!-- page-body-wrapper ends -->
     </div>
-    <div class="modal fade modal-form" id="add-state" tabindex="-1" role="dialog" aria-labelledby="add-stateLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="add-stateLabel">Add State</h5>
-          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="column">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Code">
-            </div>
-            <div class="form-group">
-              <textarea type="text" class="form-control" placeholder="Description"></textarea>
-            </div>
-            <div class="form-group">
-              <div class="input-group search-bar">
-                <div class="input-group-prepend hover-cursor">
-                  <span class="input-group-text border-right text-black text-uppercase">
-                    In
-                  </span>
-                </div>
-                <button class="form-control text-left dropdown-toggle" id="state" data-toggle="dropdown" aria-expanded="false">India</button>
-                <ul class="dropdown-menu" aria-labelledby="state">
-                  <li><a class="dropdown-item" href="#">India</a></li>
-                  <li><a class="dropdown-item" href="#">USA</a></li>
-                  <li><a class="dropdown-item" href="#">UK</a></li>
-                </ul>
+
+    <div class="modal fade modal-form" id="add-warehouse" tabindex="-1" role="dialog" aria-labelledby="add-warehouseLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="add-warehouseLabel">Update</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="column">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="id">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="code">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="name">
               </div>
             </div>
-          </div>
-          <div class="submit-btn mt-3 d-flex align-items-center justify-content-end">
-            <button type="button" class="btn btn-primary w-100">Create</button>
+            <div class="submit-btn mt-3 d-flex align-items-center justify-content-end">
+              <button type="button" class="btn btn-primary w-100">Update</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!-- container-scroller -->
+    <!-- container-scroller -->
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
