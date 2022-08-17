@@ -19,27 +19,11 @@
   <div class="container-scroller">
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html">
-          <!--<img src="images/logo.svg" class="mr-2" alt="logo"/>-->Logo
-        </a>
         <a class="navbar-brand brand-logo-mini" href="index.html">
-          <!--<img src="images/logo-mini.svg" alt="logo"/>Logo-->Logo
+          <img src="images/logo.svg" alt="logo"/>
         </a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <ul class="navbar-nav mr-lg-2">
-          <li class="nav-item nav-search d-none d-lg-block">
-            <div class="input-group">
-              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-                <span class="input-group-text" id="search">
-                  <i class="icon-search"></i>
-                </span>
-              </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search"
-                aria-label="search" aria-describedby="search">
-            </div>
-          </li>
-        </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
@@ -126,8 +110,7 @@
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="index.html">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <img src="images/Grid.svg">
             </a>
           </li>
           <li class="nav-item">
@@ -139,10 +122,10 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="contacts.html">Contacts</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Organization</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Customers</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Vendor</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Employee</a></li>
+                <li class="nav-item"> <a class="nav-link" href="organization.html">Organization</a></li>
+                <li class="nav-item"> <a class="nav-link" href="customer.html">Customers</a></li>
+                <li class="nav-item"> <a class="nav-link" href="vendor.html">Vendor</a></li>
+                <li class="nav-item"> <a class="nav-link" href="employee.html">Employee</a></li>
               </ul>
             </div>
           </li>
@@ -160,6 +143,16 @@
                 <li class="nav-item"><a class="nav-link" href="#">SMS (Short Messages)</a></li>
               </ul>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">
+              <img src="images/Cart.svg">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="task.html">
+              <img src="images/Tasks.svg">
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
@@ -374,20 +367,14 @@
   </div>
 </div>
 <!-- container-scroller -->
-<!-- plugins:js -->
-<script src="vendors/js/vendor.bundle.base.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-
-<!-- endinject -->
-<!-- End plugin js for this page-->
-<!-- inject:js -->
-<script src="js/off-canvas.js"></script>
-<script src="js/hoverable-collapse.js"></script>
-<script src="js/template.js"></script>
-<script src="js/settings.js"></script>
-<script src="js/todolist.js"></script>
-<!-- endinject -->
-<!-- End custom js for this page-->
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- endinject -->
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <!-- endinject -->
+  <!-- End custom js for this page-->
 </body>
 
 </html>
