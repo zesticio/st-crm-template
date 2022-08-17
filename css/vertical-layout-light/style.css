@@ -9012,6 +9012,10 @@ progress {
   color: #20A144 !important;
   background-color: #ECFAF2 !important;
 }
+.badge-pending {
+  color: #E56E19 !important;
+  background-color: #ff980029 !important;
+}
 output {
   display: inline-block;
 }
