@@ -9016,6 +9016,37 @@ progress {
   color: #E56E19 !important;
   background-color: #ff980029 !important;
 }
+.details {
+  border-bottom: 1px solid #E1E3E5;
+}
+img.w-175px {
+  width: 175px;
+}
+.opacity-10 {
+  opacity: .1!important;
+}
+.order-summary li {
+  font-size: 16px;
+}
+.summary{
+  background: #eee;
+  border-radius: 5px;
+  padding: 30px;
+}
+.h-lable{
+  color: #818386;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.custom-modal {
+  max-width: 1080px !important;
+  margin: 30px auto;
+}
+.total td {
+  font-size: 20px !important;
+  border-bottom: 0;
+}
 output {
   display: inline-block;
 }
