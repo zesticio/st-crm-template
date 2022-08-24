@@ -8708,12 +8708,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #1F1F1F;
+  color: #344055;
   text-align: left;
   background-color: #fff;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -8951,7 +8952,9 @@ fieldset {
   margin: 0;
   border: 0;
 }
-
+.content-wrapper.error-page {
+  background-color: #3A86FF !important;
+}
 legend {
   display: block;
   width: 100%;
@@ -9013,8 +9016,9 @@ progress {
   color: #E56E19 !important;
   background-color: #ff980029 !important;
 }
-.details {
-  border-bottom: 1px solid #E1E3E5;
+.details h5{
+  font-size: 15px;
+  font-weight: 400;
 }
 img.w-175px {
   width: 175px;
@@ -28987,6 +28991,8 @@ div.tagsinput span.tag a {
 }
 .table td, .jsgrid .jsgrid-table td{
   font-size: 15px;
+  color: #212e39 !important;
+    font-weight: 400;
 }
 h4, .h4{
   font-size: 22px;
@@ -29152,6 +29158,8 @@ h4, .h4{
 
 .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link {
   color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link:before {
@@ -29164,9 +29172,11 @@ h4, .h4{
 }
 
 .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link:hover {
-  color: #9a94a7;
+  color: #FFFFFF;
 }
-
+.sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link span {
+  margin-right: 5px;
+}
 .sidebar-dark .sidebar .nav.sub-menu .nav-item:hover {
   background: transparent;
 }
