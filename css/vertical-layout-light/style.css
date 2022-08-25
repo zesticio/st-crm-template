@@ -13620,7 +13620,9 @@ input[type="button"].btn-block {
   flex-grow: 1;
   align-items: center;
 }
-
+.search-bar input {
+  padding-left: 0;
+}
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
